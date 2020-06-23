@@ -1,0 +1,10 @@
+#!/bin/bash
+log_file="/tmp/macvlan_sh.log"
+read stdin_data
+echo "$0 $@" >> $log_file
+echo "stdin_data:$stdin_data" >> $log_file
+env |grep CNI >> $log_file
+res=`echo $stdin_data |/opt/cni/bin/macvlan_debug $@`
+echo "res: $res" >> $log_file
+echo "................." >> $log_file
+echo $res
