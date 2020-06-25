@@ -1,7 +1,7 @@
-将三个目录的配置文件拷贝到对应节点的/etc/cni/net.d/目录
-master目录对应master节点
-node1目录对应node1节点
-node2目录对应node2节点
+将三个目录的配置文件拷贝到对应节点的/etc/cni/net.d/目录  
+master目录对应master节点  
+node1目录对应node1节点  
+node2目录对应node2节点  
 
 其中:  
 subnet参数需要根据kubeadm init --pod-network-cidr=192.168.0.0/16的参数进行调整。  
